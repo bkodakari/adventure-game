@@ -1,0 +1,2 @@
+Hot Dog,1.5
+Nachos,3.0
