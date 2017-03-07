@@ -3,6 +3,7 @@ def adventure():
     adventure = raw_input("It's a beautiful, sunny day. Would you like to go on an adventure? y/n: ").lower()
     if adventure == "y":
         print "Excellent! Let's have some fun! Don't forget to bring a lunch!"
+        mountains_or_beach()
     else:
         print "Too bad, you're missing out... "
 
@@ -10,21 +11,25 @@ def mountains_or_beach():
     mountains_or_beach = int(raw_input("Where would you like to go? 1: Mountains  2: Beach? "))
     if mountains_or_beach == 1:
         print "'The mountains are calling and I must go.' - John Muir"
-    if mountains_or_beach == 2:
+        hike_or_climb()
+    elif mountains_or_beach == 2:
         print "B.E.A.C.H. = Best Escape Anyone Can Have"
     else:
         print "OOPS, I don't understand that answer, can you try again?"
         # how do I return to this loop?
-        # if / if / else loop?
+        # if / elif / else loop?
 
 def hike_or_climb():
-    hike_or_climb = int(raw_input("Would you rather go hiking or rock-climbing? 1: Hike  2: Rock-Climb "))
-    if hike_or_climb == 1:
+    hike_or_climb = raw_input("Would you rather go hiking or rock-climbing? 1: Hike  2: Rock-Climb ")
+    if int(hike_or_climb) == 1:
         print "'I took a walk in the woods and came out taller than the trees.' - Henry David Thoreau"
-    if hike_or_climb == 2:
+        waterfalls_or_views()
+    elif int(hike_or_climb) == 2:
         print "'Climb the mountain not to plant your flag, but to embrace the challenge, enjoy the air and behold the view. \nClimb it so you can see the world, not so the world can see you.' \n- David McCullough Jr."
     else:
         print "OOPS, I don't understand that answer, can you try again?"
+        hike_or_climb()
+        #not callable ...
 
 def waterfalls_or_views():
     waterfalls_or_views = int(raw_input("Do you want to see waterfalls or go directly to the summit for the view from the top?? \n1: Waterfalls  \n2: Scenic Views "))
@@ -32,7 +37,7 @@ def waterfalls_or_views():
         print "Good choice - let's go see some waterfalls!"
         # footsteps?
         picnic_or_turn_around_or_go_on()
-    if waterfalls_or_views == 2:
+    elif waterfalls_or_views == 2:
         print "You're in for quite a hike, but you will not be disappointed! "
     else:
         print "OOPS, I don't understand that answer, can you try again?"
@@ -42,6 +47,7 @@ def waterfalls_or_views():
 def picnic_or_turn_around_or_go_on():
     print "You have reached the base of the waterfall. It is tall, beautiful and majestic. The roaring water intoxicates you and the mist revitalizes you."
     print "'A strong man and a waterfall always channel their own path.' - Anonymous"
+    # waterfall graphic
     print "Now that you've taken in the splendor of nature, what would you like to do?"
     picnic_or_turn_around_or_go_on = int(raw_input("1: I want to eat my lunch here at the waterfall  \n2: I think I'm ready to head back  \n3: I'm still fresh and there is a trail that will take me to the summmit, I think I'm going to continue on and see what these views are all about " ))
     if picnic_or_turn_around_or_go_on == 1:
@@ -55,7 +61,7 @@ def picnic_or_turn_around_or_go_on():
             print "OK, you trace your steps back to the trailhead and head home.  It has been an awesome outing and you still have time to relax at home. "
             # print foot steps or "relaxing"
             exit()  
-        if go_on_or_turn_around == 2:
+        elif go_on_or_turn_around == 2:
             print "That's the spirit! This is an adventure, after all! "
             # next function...
         else:
@@ -66,7 +72,7 @@ def picnic_or_turn_around_or_go_on():
         print "OK, you trace your steps back to the trailhead and head home.  \nIt has been an awesome outing and you still have time to relax at home. "
         # print foot steps or "relaxing"
         exit()
-    if picnic_or_turn_around_or_go_on == 3:
+    elif picnic_or_turn_around_or_go_on == 3:
         print "Excellent, you won't be disappointed!"
     else:
         print "OOPS, I don't understand that answer, can you try again?" 
@@ -127,10 +133,10 @@ def picnic_or_turn_around_or_go_on():
 
 
 
-# # adventure()
-# # mountains_or_beach()
-# # hike_or_climb()
-# # picnic_or_turn_around_or_go_on()
+adventure()
+# mountains_or_beach()
+# hike_or_climb()
+# picnic_or_turn_around_or_go_on()
 
-waterfalls_or_views()
+# waterfalls_or_views()
 
